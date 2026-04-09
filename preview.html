@@ -25,7 +25,7 @@
     p {
       color: #555;
     }
-    input, button {
+    input, textarea, button {
       width: 100%;
       padding: 12px;
       margin-top: 10px;
@@ -50,11 +50,25 @@
     <h1>Sell Your Home Fast in Effingham</h1>
     <p>Get a free home value and custom selling strategy today.</p>
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="tel" placeholder="Your Phone">
+    <form action="https://formspree.io/f/mdapvabz" method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <input type="tel" name="phone" placeholder="Your Phone">
+
+      <!-- Optional but HIGH VALUE -->
+      <input type="text" name="property_address" placeholder="Property Address">
+
+      <textarea name="message" placeholder="Anything you'd like me to know?"></textarea>
+
+      <!-- Hidden fields (important) -->
+      <input type="hidden" name="_subject" value="New Seller Lead - Landing Page">
+      <input type="hidden" name="_source" value="effingham-landing-page">
+
       <button type="submit">Get My Home Value</button>
+
     </form>
   </div>
 
